@@ -1,11 +1,11 @@
+import React from 'react';
 
-
-
-export default function FirstComponent() {
-    const name = "Foulen";
-    const name1 = <p> Ben foulen </p>;
-    return ( <div>
+ const name = "Foulen";
+ const name1 = <p> Ben foulen </p>;
+export default class  FirstComponent extends React.Component {
+   
+  render()   { return ( <div>
         {name1}
         <p> hello {name} </p>
-        </div>)
+        </div>) }
 }

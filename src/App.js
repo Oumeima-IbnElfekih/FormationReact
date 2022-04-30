@@ -1,18 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-import FirstComponent from './Components/FirstComponent';
+
+import FunctionalComponent from './Components/FunctionalComponent';
+import ClassComponent from './Components/ClassComponent';
 
 function App() {
-  const menu = [<li>un</li>, <li>deux</li>, <li>trois</li>];
+  // const menu = [<li>un</li>, <li>deux</li>, <li>trois</li>];
+ 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-             <FirstComponent />
-          <ul> {menu}
-          </ul>
-       
+        {/* <FirstComponent />
+         <EcmaScriptComponent />  */}
+          {/* <FunctionalComponent name="Mohamed" prenom="ben mohamed" /> */}
+          <ClassComponent name="Mohamed" prenom="ben mohamed"/>
       </header>
+     
     </div>
   );
 }
