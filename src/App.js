@@ -1,24 +1,55 @@
 import logo from './logo.svg';
 import './App.css';
 
-import FunctionalComponent from './Components/FunctionalComponent';
+import { BrowserRouter, Route, Routes  } from "react-router-dom";
 import ClassComponent from './Components/ClassComponent';
+import Home from './Components/Home';
+import FunctionalComponent from './Components/FunctionalComponent';
+import Navbar from './Components/Navbar';
+import FirstComponent from './Components/FirstComponent';
+ 
+
 
 function App() {
-  // const menu = [<li>un</li>, <li>deux</li>, <li>trois</li>];
+ 
  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        {/* <FirstComponent />
-         <EcmaScriptComponent />  */}
-          {/* <FunctionalComponent name="Mohamed" prenom="ben mohamed" /> */}
-          <ClassComponent name="Mohamed" prenom="ben mohamed"/>
-      </header>
+    
      
+       
+      <img src={logo} className="App-logo" alt="logo" />
+      
+      <BrowserRouter  basename="/" >
+      <Navbar /> 
+      <Routes>
+      <Route exact  path="/"  element={ <Home  />}/>
+      <Route exact  path="/functionalComponent"  element={ <FunctionalComponent />} />
+      <Route exact  path="/classComponent" element={ <ClassComponent />} />
+   
+      </Routes>
+    </BrowserRouter>
+
+
+
+
+
+
+
+
+
+     
+     
+      
+
     </div>
   );
 }
 
 export default App;
+
+
+
+
+   
+      {/*   */}
